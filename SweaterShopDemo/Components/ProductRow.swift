@@ -6,25 +6,27 @@
 //
 
 import SwiftUI
+import Firebase
+import Kingfisher
 
 struct ProductRow: View {
     @EnvironmentObject var cartManager: CartManager
-    var product: Product
+    var item: Item
     
     var body: some View {
         HStack(spacing: 20) {
             
-            Image(product.image)
+            KFImage(URL(string: item.item_image))
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50)
                 .cornerRadius(10)
             
             VStack(alignment: .leading, spacing: 10) {
-                Text(product.name)
+                Text(item.item_title)
                     .bold()
                 
-                Text("$\(product.price)")
+                Text("$\(item.item_price)")
                 
             }
             
@@ -34,7 +36,7 @@ struct ProductRow: View {
                 .foregroundColor(.red)
                 .padding()
                 .onTapGesture {
-                    cartManager.removeFromCart(product: product)
+                    cartManager.removeFromCart(item: item)
                 }
             
         }
@@ -45,7 +47,7 @@ struct ProductRow: View {
 
 struct ProductRow_Previews: PreviewProvider {
     static var previews: some View {
-        ProductRow(product: productList[3])
+        ProductRow(item: itemList[0])
             .environmentObject(CartManager())
     }
 }

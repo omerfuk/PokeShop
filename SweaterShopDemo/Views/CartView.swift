@@ -11,15 +11,16 @@ struct CartView: View {
     @EnvironmentObject var cartManager: CartManager
     var body: some View {
         ScrollView {
-            if cartManager.products.count > 0 {
-                ForEach(cartManager.products, id: \.id) { product in
-                    ProductRow(product: product)
+            if cartManager.itemsOnCart.count > 0 {
+                ForEach(cartManager.itemsOnCart) { item in
+                    ProductRow(item: item)
                     
                 }
                 
                 HStack {
                     Text("Your Cart total is")
                     Spacer()
+                    
                     Text("$\(cartManager.total).00")
                         .bold()
                 }
@@ -36,6 +37,7 @@ struct CartView: View {
         }
         .navigationTitle("My Card")
         .padding(.top)
+        
     }
 }
 

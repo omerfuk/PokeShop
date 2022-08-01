@@ -14,27 +14,34 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-            ScrollView{
-                LazyVGrid(columns: columns,spacing: 20) {
-                    ForEach(productList, id: \.id) { product in
-                        
-                        ProductCard(product: product)
-                            .environmentObject(cartManager)
-                        
-                        
+            ZStack{
+                ScrollView{
+                    LazyVGrid(columns: columns,spacing: 20) {
+                        ForEach(cartManager.items) { item in
+                            
+                            ProductCard(item: item)
+                                .environmentObject(cartManager)
+                            
+                            
+                        }
                     }
+                    .padding()
                 }
-                .padding()
-            }
-            .navigationTitle("Sweater Shop")
-            .toolbar {
-                NavigationLink {
-                    CartView()
-                        .environmentObject(cartManager)
-                } label: {
-                    CartButton(numberOfProducts: cartManager.products.count)
+                .onAppear{
+                    
+                    cartManager.fetchData()
                 }
-
+                .navigationTitle("Sweater Shop")
+                .toolbar {
+                    NavigationLink {
+                        CartView()
+                            .environmentObject(cartManager)
+                    } label: {
+                        CartButton(numberOfProducts: cartManager.itemsOnCart.count)
+                    }
+                    
+                    
+                }
                 
             }
         }

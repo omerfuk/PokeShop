@@ -6,25 +6,25 @@
 //
 
 import SwiftUI
-
+import Kingfisher
 struct ProductCard: View {
     @EnvironmentObject var cartManager: CartManager
-    var product: Product
+    var item: Item
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
             ZStack(alignment: .bottom) {
-                Image(product.image)
+                KFImage(URL(string: item.item_image))
                     .resizable()
                     .cornerRadius(25)
                     .frame(width: 170)
                     .scaledToFit()
                 
                 VStack(alignment: .leading) {
-                    Text(product.name)
+                    Text(item.item_title)
                         .bold()
                     
-                    Text("\(product.price)$")
+                    Text("\(item.item_price)$")
                         .font(.caption)
                     
                 }
@@ -38,7 +38,7 @@ struct ProductCard: View {
         .shadow(radius: 3)
             
             Button {
-                cartManager.addToCart(product: product)
+                cartManager.addToCart(item: item)
             } label: {
                 Image(systemName: "plus")
                     .padding(10)
@@ -54,7 +54,7 @@ struct ProductCard: View {
 
 struct ProductCard_Previews: PreviewProvider {
     static var previews: some View {
-        ProductCard(product: productList[0])
+        ProductCard(item: itemList[0])
             .environmentObject(CartManager())
     }
 }
