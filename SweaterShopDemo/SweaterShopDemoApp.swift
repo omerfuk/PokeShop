@@ -23,7 +23,12 @@ struct SweaterShopDemoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView{
+                let viewModel = AppViewModel()
+                LoginView()
+                    .environmentObject(viewModel)
+            }
+            
         }
     }
 }
