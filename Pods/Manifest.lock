@@ -476,11 +476,13 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.1.0)
+  - SSSwiftUIGIFView (1.0.0)
 
 DEPENDENCIES:
   - Firebase
   - FirebaseAuth
   - FirebaseFirestore
+  - SSSwiftUIGIFView
 
 SPEC REPOS:
   trunk:
@@ -502,6 +504,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SSSwiftUIGIFView
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -522,7 +525,8 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
+  SSSwiftUIGIFView: f109262cd0baff190b58b519c0e94f7622c428d4
 
-PODFILE CHECKSUM: 424390048cc9e0fd0f6d6fd84f68764e7e94c4d8
+PODFILE CHECKSUM: 4d4024f0541140571fcd40bfb8ef844ab0205c92
 
 COCOAPODS: 1.11.3

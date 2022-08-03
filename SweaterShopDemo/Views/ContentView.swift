@@ -23,6 +23,8 @@ struct ContentView: View {
                                 
                                 ProductCard(item: item)
                                     .environmentObject(cartManager)
+                                    .shadow(color: .red, radius: 5, x: 5, y: 5)
+                                
                                 
                                 
                             }

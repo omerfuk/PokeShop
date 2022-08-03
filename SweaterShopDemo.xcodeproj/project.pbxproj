@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5C412E33377F2F8A435DFD80 /* Pods_SweaterShopDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB51262822E21E04076A010 /* Pods_SweaterShopDemo.framework */; };
+		DE1F05B4289A4CA100F29A96 /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F05B3289A4CA100F29A96 /* PokemonViewModel.swift */; };
+		DE1F05BB289A4CAC00F29A96 /* PokeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F05B5289A4CAB00F29A96 /* PokeDetailView.swift */; };
+		DE1F05BC289A4CAC00F29A96 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F05B6289A4CAB00F29A96 /* ProgressBar.swift */; };
+		DE1F05BD289A4CAC00F29A96 /* PokedexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F05B7289A4CAB00F29A96 /* PokedexView.swift */; };
+		DE1F05BF289A4CAC00F29A96 /* ProgressBarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F05B9289A4CAC00F29A96 /* ProgressBarRow.swift */; };
+		DE1F05C0289A4CAC00F29A96 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F05BA289A4CAC00F29A96 /* PokemonCell.swift */; };
+		DE1F05C2289A4CB800F29A96 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F05C1289A4CB700F29A96 /* Pokemon.swift */; };
 		DE25BA782897F88800306CF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE25BA772897F88800306CF6 /* GoogleService-Info.plist */; };
 		DE53F90F28967F50008755FB /* SweaterShopDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53F90E28967F50008755FB /* SweaterShopDemoApp.swift */; };
 		DE53F91128967F50008755FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53F91028967F50008755FB /* ContentView.swift */; };
@@ -19,7 +26,9 @@
 		DE53F927289684AB008755FB /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53F926289684AB008755FB /* CartView.swift */; };
 		DE53F9292896864C008755FB /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53F9282896864C008755FB /* CartManager.swift */; };
 		DE53F92B2896883B008755FB /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53F92A2896883B008755FB /* ProductRow.swift */; };
-		DEAEB1202897FF4500AA56AF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DEAEB11F2897FF4500AA56AF /* Kingfisher */; };
+		DE705343289AAD480070B5CE /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DE705342289AAD480070B5CE /* SDWebImageSwiftUI */; };
+		DE705346289AAD5A0070B5CE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DE705345289AAD5A0070B5CE /* Kingfisher */; };
+		DEC04198289A3A3800C6A414 /* pokegif.gif in Resources */ = {isa = PBXBuildFile; fileRef = DEC04197289A3A3800C6A414 /* pokegif.gif */; };
 		DEC058AA2898F3E90021202B /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC058A92898F3E90021202B /* AppViewModel.swift */; };
 		DEC058AC289929EB0021202B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC058AB289929EB0021202B /* LoginView.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +37,13 @@
 		2A3E047FF9510178EE042890 /* Pods-SweaterShopDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweaterShopDemo.debug.xcconfig"; path = "Target Support Files/Pods-SweaterShopDemo/Pods-SweaterShopDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		95120BBB7482CD01E5096102 /* Pods-SweaterShopDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweaterShopDemo.release.xcconfig"; path = "Target Support Files/Pods-SweaterShopDemo/Pods-SweaterShopDemo.release.xcconfig"; sourceTree = "<group>"; };
 		DCB51262822E21E04076A010 /* Pods_SweaterShopDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SweaterShopDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1F05B3289A4CA100F29A96 /* PokemonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
+		DE1F05B5289A4CAB00F29A96 /* PokeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeDetailView.swift; sourceTree = "<group>"; };
+		DE1F05B6289A4CAB00F29A96 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		DE1F05B7289A4CAB00F29A96 /* PokedexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexView.swift; sourceTree = "<group>"; };
+		DE1F05B9289A4CAC00F29A96 /* ProgressBarRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarRow.swift; sourceTree = "<group>"; };
+		DE1F05BA289A4CAC00F29A96 /* PokemonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		DE1F05C1289A4CB700F29A96 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		DE25BA772897F88800306CF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE53F90B28967F50008755FB /* SweaterShopDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweaterShopDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE53F90E28967F50008755FB /* SweaterShopDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweaterShopDemoApp.swift; sourceTree = "<group>"; };
@@ -40,6 +56,8 @@
 		DE53F926289684AB008755FB /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		DE53F9282896864C008755FB /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		DE53F92A2896883B008755FB /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		DEC04197289A3A3800C6A414 /* pokegif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pokegif.gif; sourceTree = "<group>"; };
+		DEC0419C289A3C1000C6A414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DEC058A92898F3E90021202B /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		DEC058AB289929EB0021202B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,7 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEAEB1202897FF4500AA56AF /* Kingfisher in Frameworks */,
+				DE705346289AAD5A0070B5CE /* Kingfisher in Frameworks */,
+				DE705343289AAD480070B5CE /* SDWebImageSwiftUI in Frameworks */,
 				5C412E33377F2F8A435DFD80 /* Pods_SweaterShopDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +83,18 @@
 				95120BBB7482CD01E5096102 /* Pods-SweaterShopDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DE1F05B2289A4C7A00F29A96 /* InfoViews */ = {
+			isa = PBXGroup;
+			children = (
+				DE1F05B5289A4CAB00F29A96 /* PokeDetailView.swift */,
+				DE1F05B7289A4CAB00F29A96 /* PokedexView.swift */,
+				DE1F05BA289A4CAC00F29A96 /* PokemonCell.swift */,
+				DE1F05B6289A4CAB00F29A96 /* ProgressBar.swift */,
+				DE1F05B9289A4CAC00F29A96 /* ProgressBarRow.swift */,
+			);
+			path = InfoViews;
 			sourceTree = "<group>";
 		};
 		DE53F90228967F50008755FB = {
@@ -87,6 +118,8 @@
 		DE53F90D28967F50008755FB /* SweaterShopDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DEC0419C289A3C1000C6A414 /* Info.plist */,
+				DEC04197289A3A3800C6A414 /* pokegif.gif */,
 				DE25BA772897F88800306CF6 /* GoogleService-Info.plist */,
 				DE53F92C289689C1008755FB /* ViewModels */,
 				DE53F90E28967F50008755FB /* SweaterShopDemoApp.swift */,
@@ -110,6 +143,7 @@
 		DE53F91C28968008008755FB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DE1F05C1289A4CB700F29A96 /* Pokemon.swift */,
 				DE53F91D28968012008755FB /* Item.swift */,
 			);
 			path = Models;
@@ -128,6 +162,7 @@
 		DE53F922289682C9008755FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DE1F05B2289A4C7A00F29A96 /* InfoViews */,
 				DE53F91028967F50008755FB /* ContentView.swift */,
 				DE53F926289684AB008755FB /* CartView.swift */,
 				DEC058AB289929EB0021202B /* LoginView.swift */,
@@ -138,6 +173,7 @@
 		DE53F92C289689C1008755FB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DE1F05B3289A4CA100F29A96 /* PokemonViewModel.swift */,
 				DE53F9282896864C008755FB /* CartManager.swift */,
 				DEC058A92898F3E90021202B /* AppViewModel.swift */,
 			);
@@ -171,7 +207,8 @@
 			);
 			name = SweaterShopDemo;
 			packageProductDependencies = (
-				DEAEB11F2897FF4500AA56AF /* Kingfisher */,
+				DE705342289AAD480070B5CE /* SDWebImageSwiftUI */,
+				DE705345289AAD5A0070B5CE /* Kingfisher */,
 			);
 			productName = SweaterShopDemo;
 			productReference = DE53F90B28967F50008755FB /* SweaterShopDemo.app */;
@@ -202,9 +239,8 @@
 			);
 			mainGroup = DE53F90228967F50008755FB;
 			packageReferences = (
-				DE25BA792897FB9F00306CF6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				DE25BA7A2897FEFB00306CF6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				DEAEB11E2897FF4500AA56AF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				DE705341289AAD480070B5CE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				DE705344289AAD5A0070B5CE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = DE53F90C28967F50008755FB /* Products */;
 			projectDirPath = "";
@@ -220,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC04198289A3A3800C6A414 /* pokegif.gif in Resources */,
 				DE53F91628967F53008755FB /* Preview Assets.xcassets in Resources */,
 				DE25BA782897F88800306CF6 /* GoogleService-Info.plist in Resources */,
 				DE53F91328967F53008755FB /* Assets.xcassets in Resources */,
@@ -275,14 +312,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1F05C0289A4CAC00F29A96 /* PokemonCell.swift in Sources */,
 				DE53F927289684AB008755FB /* CartView.swift in Sources */,
+				DE1F05BF289A4CAC00F29A96 /* ProgressBarRow.swift in Sources */,
+				DE1F05BD289A4CAC00F29A96 /* PokedexView.swift in Sources */,
+				DE1F05C2289A4CB800F29A96 /* Pokemon.swift in Sources */,
 				DE53F91128967F50008755FB /* ContentView.swift in Sources */,
 				DEC058AA2898F3E90021202B /* AppViewModel.swift in Sources */,
 				DE53F9292896864C008755FB /* CartManager.swift in Sources */,
 				DE53F90F28967F50008755FB /* SweaterShopDemoApp.swift in Sources */,
 				DE53F92B2896883B008755FB /* ProductRow.swift in Sources */,
 				DE53F91E28968012008755FB /* Item.swift in Sources */,
+				DE1F05B4289A4CA100F29A96 /* PokemonViewModel.swift in Sources */,
+				DE1F05BB289A4CAC00F29A96 /* PokeDetailView.swift in Sources */,
 				DEC058AC289929EB0021202B /* LoginView.swift in Sources */,
+				DE1F05BC289A4CAC00F29A96 /* ProgressBar.swift in Sources */,
 				DE53F921289680B9008755FB /* ProductCard.swift in Sources */,
 				DE53F924289683C8008755FB /* CartButton.swift in Sources */,
 			);
@@ -417,9 +461,9 @@
 				DEVELOPMENT_TEAM = 7CRNJ953YN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SweaterShopDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -447,9 +491,9 @@
 				DEVELOPMENT_TEAM = 7CRNJ953YN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SweaterShopDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -489,23 +533,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DE25BA792897FB9F00306CF6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		DE705341289AAD480070B5CE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
+				minimumVersion = 2.0.0;
 			};
 		};
-		DE25BA7A2897FEFB00306CF6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		DEAEB11E2897FF4500AA56AF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		DE705344289AAD5A0070B5CE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -516,9 +552,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DEAEB11F2897FF4500AA56AF /* Kingfisher */ = {
+		DE705342289AAD480070B5CE /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DE25BA7A2897FEFB00306CF6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = DE705341289AAD480070B5CE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		DE705345289AAD5A0070B5CE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE705344289AAD5A0070B5CE /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -10,5 +10,6 @@ target 'SweaterShopDemo' do
 pod 'Firebase'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
+pod 'SSSwiftUIGIFView'
 
 end

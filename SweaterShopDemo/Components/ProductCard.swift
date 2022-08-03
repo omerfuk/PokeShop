@@ -49,6 +49,7 @@ struct ProductCard: View {
             }
 
         }
+        .shadow(color: .black, radius: 5, x: 5, y: 5)
     }
 }
 

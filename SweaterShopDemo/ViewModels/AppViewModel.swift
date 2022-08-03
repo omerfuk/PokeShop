@@ -10,9 +10,12 @@ import FirebaseAuth
 
 class AppViewModel: ObservableObject {
     
-    let auth = Auth.auth()
     
+    let auth = Auth.auth()
+    @State var success = false
     @Published var signedIn = false
+    @Published var errorMessage = ""
+    
     
     var isSignedIn: Bool {
         
@@ -28,12 +31,19 @@ class AppViewModel: ObservableObject {
                 //Success
                 
                 DispatchQueue.main.async {
+                    self?.success = true
                     self?.signedIn = true
                 }
                 return
             }
             else{
-                print(error)
+                DispatchQueue.main.async {
+                    self?.success = false
+                    print(error)
+                    self?.errorMessage = error?.localizedDescription ?? "Error occured"
+                }
+                
+                
             }
             
             

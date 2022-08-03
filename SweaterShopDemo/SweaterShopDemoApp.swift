@@ -20,13 +20,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct SweaterShopDemoApp: App {
+    @StateObject var pokemonViewModel = PokemonViewModel()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
             NavigationView{
                 let viewModel = AppViewModel()
+                
                 LoginView()
                     .environmentObject(viewModel)
+                    .environmentObject(pokemonViewModel)
             }
             
         }

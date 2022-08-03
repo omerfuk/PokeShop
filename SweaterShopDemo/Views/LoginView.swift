@@ -15,6 +15,7 @@ struct LoginView: View {
        
             if appViewModel.signedIn == true {
                 ContentView()
+                    .preferredColorScheme(.light)
             }
             else{
                 Home()
@@ -57,6 +58,28 @@ struct Home: View {
                     Login(index: self.$index)
                     
                 }
+                .padding(.bottom,30)
+                
+                
+                
+                
+
+                NavigationLink {
+                    PokedexView()
+                } label: {
+                    Text("INFO")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .padding(.horizontal, 50)
+                        .background(Color("Color1"))
+                        .clipShape(Capsule())
+                        // shadow...
+                        .shadow(color: Color.white.opacity(0.1), radius: 5, x: 0, y: 5)
+                }
+                
+
+
                 
                 HStack(spacing: 15) {
                     
@@ -72,7 +95,7 @@ struct Home: View {
                         .frame(height: 1)
                 }
                 .padding(.horizontal, 20)
-                .padding(.top, 50)
+                .padding(.top, 20)
                 // because login button is moved 25 in y axis and 25 padding = 50
                 
                 HStack(spacing: 25) {
@@ -116,13 +139,16 @@ struct Home: View {
 
                     
                 }
-                .padding(.top, 30)
+                .padding(.top, 15)
+                
                 
             }
             .padding(.vertical)
             
         }
         .background(Color("Color").edgesIgnoringSafeArea(.all))
+        
+        
     }
 }
 
@@ -165,6 +191,8 @@ struct Login: View {
     @State var email = ""
     @State var password = ""
     @Binding var index : Int
+    
+    @State var showAlert = false
     
     var body: some View {
         
@@ -257,6 +285,14 @@ struct Login: View {
             
             Button {
                 appViewModel.signIn(email: email, password: password)
+               //ALERT CONDITION
+                sleep(1)
+                
+                if appViewModel.success == false {
+                    showAlert.toggle()
+                }
+                
+                
             } label: {
                 Text("LOGIN")
                     .foregroundColor(.white)
@@ -268,10 +304,13 @@ struct Login: View {
                     // shadow...
                     .shadow(color: Color.white.opacity(0.1), radius: 5, x: 0, y: 5)
             }
+            
             // moving view down..
             .offset(y: 25)
             .opacity(self.index == 0 ? 1 : 0)
-            
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Error"), message: Text(appViewModel.errorMessage), dismissButton: .destructive(Text("OK")))
+            }
         }
         
     }
@@ -284,7 +323,7 @@ struct Login: View {
 struct SignUP: View {
     
     @EnvironmentObject var appViewModel: AppViewModel
-    
+    @State var showAlert = false
     @State var email = ""
     @State var password = ""
     @State var Repassword = ""
@@ -391,7 +430,14 @@ struct SignUP: View {
             
             Button {
                 
-                appViewModel.signUp(email: email, password: password)
+                if !password.isEmpty && password == Repassword && email.isValidEmail == true {
+                    appViewModel.signUp(email: email, password: password)
+                }
+                else{
+                    showAlert.toggle()
+                }
+                
+                
                 
             } label: {
                 
@@ -406,15 +452,32 @@ struct SignUP: View {
                     // shadow...
                     .shadow(color: Color.white.opacity(0.1), radius: 5, x: 0, y: 5)
             }
+            
             // moving view down..
             .offset(y: 25)
             
             // hiding view when its in background...
             // only button...
             .opacity(self.index == 1 ? 1 : 0)
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Error"), message: Text(email.isValidEmail ? "Passwords does not match!" : "Email is badly formatted"), dismissButton: .destructive(Text("OK")))
+            }
 
             
         }
         
     }
+}
+
+
+extension String {
+
+  var isValidEmail: Bool {
+    let name = "[A-Z0-9a-z]([A-Z0-9a-z._%+-]{0,30}[A-Z0-9a-z])?"
+    let domain = "([A-Z0-9a-z]([A-Z0-9a-z-]{0,30}[A-Z0-9a-z])?\\.){1,5}"
+    let emailRegEx = name + "@" + domain + "[A-Za-z]{2,8}"
+    let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+    return emailPredicate.evaluate(with: self)
+  }
+
 }
