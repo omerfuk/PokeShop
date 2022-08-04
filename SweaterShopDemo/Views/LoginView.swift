@@ -255,16 +255,11 @@ struct Login: View {
                     
                     Spacer(minLength: 0)
                     
-                    Button {
-                        
-                    } label: {
-                        Text("Forget Password?")
-                            .foregroundColor(Color.white.opacity(0.6))
-                    }
+                    
 
                 }
                 .padding(.horizontal)
-                .padding(.top, 30)
+                .padding(.top, 50)
             }
             .padding()
             // bottom padding...

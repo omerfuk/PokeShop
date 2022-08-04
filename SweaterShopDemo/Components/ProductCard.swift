@@ -17,7 +17,7 @@ struct ProductCard: View {
                 KFImage(URL(string: item.item_image))
                     .resizable()
                     .cornerRadius(25)
-                    .frame(width: 170)
+                    .frame(width: 140, height: 185)
                     .scaledToFit()
                 
                 VStack(alignment: .leading) {
@@ -29,13 +29,14 @@ struct ProductCard: View {
                     
                 }
                 .padding()
-                .frame(width: 170, alignment: .leading)
-                .background(.ultraThinMaterial)
+                .frame(width: 150, alignment: .leading)
+                .background(.ultraThinMaterial).opacity(0.95)
                 .cornerRadius(20)
                 
             }
-            .frame(width: 170, height: 250)
-        .shadow(radius: 3)
+            .frame(width: 150, height: 200)
+            .shadow(radius: 3)
+            
             
             Button {
                 cartManager.addToCart(item: item)
@@ -49,7 +50,9 @@ struct ProductCard: View {
             }
 
         }
-        .shadow(color: .black, radius: 5, x: 5, y: 5)
+        .background(.cyan.opacity(0.3))
+        .cornerRadius(15)
+        .shadow(color: .black, radius: 3, x: 2, y: 2)
     }
 }
 

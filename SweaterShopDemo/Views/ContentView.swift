@@ -11,19 +11,26 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: AppViewModel
     @StateObject var cartManager = CartManager()
     
-    var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
+    var columns = [GridItem(.adaptive(minimum: 140), spacing: 20)]
     
     var body: some View {
         
             
                 ZStack{
+                    Color("Color1").opacity(0.25).ignoresSafeArea()
                     ScrollView{
                         LazyVGrid(columns: columns,spacing: 20) {
                             ForEach(cartManager.items) { item in
                                 
-                                ProductCard(item: item)
-                                    .environmentObject(cartManager)
-                                    .shadow(color: .red, radius: 5, x: 5, y: 5)
+                                NavigationLink {
+                                    ItemDetailView(item: item)
+                                        .environmentObject(cartManager)
+                                } label: {
+                                    ProductCard(item: item)
+                                        .environmentObject(cartManager)
+                                }
+
+                        
                                 
                                 
                                 

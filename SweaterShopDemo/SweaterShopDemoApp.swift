@@ -27,7 +27,7 @@ struct SweaterShopDemoApp: App {
             NavigationView{
                 let viewModel = AppViewModel()
                 
-                LoginView()
+                ContentView()
                     .environmentObject(viewModel)
                     .environmentObject(pokemonViewModel)
             }
