@@ -26,7 +26,7 @@ struct ContentView: View {
                                     ItemDetailView(item: item)
                                         .environmentObject(cartManager)
                                 } label: {
-                                    ProductCard(item: item)
+                                    ProductCard(item: item, showAlert: false)
                                         .environmentObject(cartManager)
                                 }
 
@@ -45,7 +45,7 @@ struct ContentView: View {
                     .navigationTitle("Sweater Shop")
                     .toolbar {
                         NavigationLink {
-                            CartView()
+                            CartView(showAlert: false)
                                 .environmentObject(cartManager)
                         } label: {
                             CartButton(numberOfProducts: cartManager.itemsOnCart.count)

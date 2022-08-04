@@ -26,7 +26,7 @@ struct ProductRow: View {
                 Text(item.item_title)
                     .bold()
                 
-                Text("$\(item.item_price)")
+                Text("$\(ridZero(result:item.item_price))")
                 
             }
             
@@ -42,6 +42,11 @@ struct ProductRow: View {
         }
         .padding(.horizontal)
         .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    func ridZero(result: Float) -> String {
+            let value = String(format: "%g", result)
+            return value
     }
 }
 

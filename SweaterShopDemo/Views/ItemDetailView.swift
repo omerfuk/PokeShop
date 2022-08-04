@@ -22,17 +22,19 @@ struct ItemDetailView: View {
                 KFImage(URL(string: item.item_image))
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 250, height: 400)
+                    .frame(width: 250, height: 300)
                     .cornerRadius(15)
                 
                 Text(item.item_title)
                     .font(.largeTitle)
                     .bold()
                     .foregroundColor(.white)
+                    .offset(y: -50)
                     
                 Text(item.item_description)
                     .font(.body)
                     .bold()
+                    .italic()
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                     
@@ -46,13 +48,13 @@ struct ItemDetailView: View {
                 
                 HStack {
                     
-                    Text("\(item.item_price)$")
+                    Text("\(ridZero(result:item.item_price))$")
                         .bold()
                         .font(.title)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("Color1"))
                         .padding()
                         .padding(.horizontal)
-                        .background(Color("Color1").opacity(0.75))
+                        .background(.white.opacity(0.75))
                         .cornerRadius(20)
                     
                     Button {
@@ -75,12 +77,16 @@ struct ItemDetailView: View {
                     
                     
                 }
-                    
+                   Spacer()
             }
             .padding()
             
             
         }
+    }
+    func ridZero(result: Float) -> String {
+            let value = String(format: "%g", result)
+            return value
     }
 }
 

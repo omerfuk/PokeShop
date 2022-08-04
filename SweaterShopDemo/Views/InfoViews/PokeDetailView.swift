@@ -78,7 +78,7 @@ struct PokeDetailView: View {
 
                 }
 
-        }
+        }.accentColor(Color("Color1"))
         
         
         

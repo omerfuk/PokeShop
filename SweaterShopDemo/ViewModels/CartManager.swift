@@ -55,6 +55,10 @@ class CartManager: ObservableObject {
         
     }
     
+    func setZeroTotal() {
+        total = 0
+    }
+    
     
     func addToCart(item: Item) {
         
