@@ -126,7 +126,6 @@
 				DE53F92C289689C1008755FB /* ViewModels */,
 				DE53F90E28967F50008755FB /* SweaterShopDemoApp.swift */,
 				DE53F922289682C9008755FB /* Views */,
-				DE53F91F289680A8008755FB /* Components */,
 				DE53F91C28968008008755FB /* Models */,
 				DE53F91228967F53008755FB /* Assets.xcassets */,
 				DE53F91428967F53008755FB /* Preview Content */,
@@ -164,6 +163,7 @@
 		DE53F922289682C9008755FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DE53F91F289680A8008755FB /* Components */,
 				DE1F05B2289A4C7A00F29A96 /* InfoViews */,
 				DE53F91028967F50008755FB /* ContentView.swift */,
 				DE53F926289684AB008755FB /* CartView.swift */,

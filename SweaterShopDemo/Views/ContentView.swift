@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var viewModel: AppViewModel
     @StateObject var cartManager = CartManager()
+    @State var search = ""
     
     var columns = [GridItem(.adaptive(minimum: 140), spacing: 20)]
     
@@ -20,7 +21,7 @@ struct ContentView: View {
                     Color("Color1").opacity(0.25).ignoresSafeArea()
                     ScrollView{
                         LazyVGrid(columns: columns,spacing: 20) {
-                            ForEach(cartManager.items) { item in
+                            ForEach(search.isEmpty ? cartManager.items : cartManager.filtered) { item in
                                 
                                 NavigationLink {
                                     ItemDetailView(item: item)
@@ -38,11 +39,21 @@ struct ContentView: View {
                         }
                         .padding()
                     }
+                    .searchable(text: $search)
+                    .onChange(of: search, perform: { searchValue in
+                        
+                        withAnimation {
+                            cartManager.filtered = cartManager.items.filter({ item in
+                                item.item_title.lowercased().contains(search.lowercased())
+                            })
+                        }
+                    })
                     .onAppear{
                         
                         cartManager.fetchData()
                     }
                     .navigationTitle("Sweater Shop")
+                    
                     .toolbar {
                         NavigationLink {
                             CartView(showAlert: false)

@@ -107,9 +107,8 @@ struct Home: View {
                         Image("apple")
                             .resizable()
                             .renderingMode(.original)
-                            .frame(width: 50, height: 50)
-                            .shadow(color: .white, radius: 5, x: 0, y: 5)
-                            .clipShape(Circle())
+                            .frame(width: 43, height: 43)
+                            
                         
                     }
                     
@@ -120,7 +119,7 @@ struct Home: View {
                         Image("facebook")
                             .resizable()
                             .renderingMode(.original)
-                            .frame(width: 50, height: 50)
+                            .frame(width: 43, height: 43)
                             .clipShape(Circle())
                         
                     }
@@ -132,8 +131,8 @@ struct Home: View {
                         Image("twitter")
                             .resizable()
                             .renderingMode(.original)
-                            .frame(width: 50, height: 50)
-                            .clipShape(Circle())
+                            .frame(width: 43, height: 43)
+                            
                         
                     }
 

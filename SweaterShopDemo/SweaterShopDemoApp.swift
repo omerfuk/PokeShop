@@ -27,10 +27,11 @@ struct SweaterShopDemoApp: App {
             NavigationView{
                 let viewModel = AppViewModel()
                 
-                ContentView()
+                LoginView()
                     .environmentObject(viewModel)
                     .environmentObject(pokemonViewModel)
             }
+            .accentColor(Color("Color1").opacity(0.8))
             
         }
     }

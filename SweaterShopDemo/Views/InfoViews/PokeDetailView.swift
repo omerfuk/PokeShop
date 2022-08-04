@@ -77,8 +77,9 @@ struct PokeDetailView: View {
                     .padding(.horizontal)
 
                 }
+                
 
-        }.accentColor(Color("Color1"))
+        }
         
         
         
