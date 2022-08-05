@@ -279,8 +279,7 @@ struct Login: View {
             
             Button {
                 appViewModel.signIn(email: email, password: password)
-               //ALERT CONDITION
-                sleep(1)
+                //ALERT CONDITION
                 
                 if appViewModel.success == false {
                     showAlert.toggle()

@@ -34,7 +34,7 @@ class AppViewModel: ObservableObject {
                     self?.success = true
                     self?.signedIn = true
                 }
-                return
+                
             }
             else{
                 DispatchQueue.main.async {

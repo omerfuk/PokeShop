@@ -92,9 +92,7 @@
 			children = (
 				DE1F05B5289A4CAB00F29A96 /* PokeDetailView.swift */,
 				DE1F05B7289A4CAB00F29A96 /* PokedexView.swift */,
-				DE1F05BA289A4CAC00F29A96 /* PokemonCell.swift */,
-				DE1F05B6289A4CAB00F29A96 /* ProgressBar.swift */,
-				DE1F05B9289A4CAC00F29A96 /* ProgressBarRow.swift */,
+				DE54711D289CEDAD00C52405 /* InfoComponents */,
 			);
 			path = InfoViews;
 			sourceTree = "<group>";
@@ -181,6 +179,16 @@
 				DEC058A92898F3E90021202B /* AppViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DE54711D289CEDAD00C52405 /* InfoComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DE1F05BA289A4CAC00F29A96 /* PokemonCell.swift */,
+				DE1F05B6289A4CAB00F29A96 /* ProgressBar.swift */,
+				DE1F05B9289A4CAC00F29A96 /* ProgressBarRow.swift */,
+			);
+			path = InfoComponents;
 			sourceTree = "<group>";
 		};
 		DF324610A0BC653CE2978F3C /* Frameworks */ = {

@@ -45,7 +45,7 @@ struct ProductCard: View {
                 Image(systemName: "plus")
                     .padding(10)
                     .foregroundColor(.white)
-                    .background(.black)
+                    .background(Color("Color1"))
                     .cornerRadius(50)
                     .padding()
             }
