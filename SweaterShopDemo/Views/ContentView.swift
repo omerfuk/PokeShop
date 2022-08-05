@@ -13,17 +13,14 @@ struct ContentView: View {
     @State var search = ""
     
     var columns = [GridItem(.adaptive(minimum: 140), spacing: 20)]
- 
-    /*
-     To change navigation bar appearance
-    
+
     init() {
         let navBarAppearance = UINavigationBar.appearance()
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
      
-    */
+    
     var body: some View {
         
         ZStack{

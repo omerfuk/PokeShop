@@ -43,7 +43,7 @@ struct ProductCard: View {
                 showAlert.toggle()
             } label: {
                 Image(systemName: "plus")
-                    .padding(10)
+                    .padding(15) // 10 -> 15
                     .foregroundColor(.white)
                     .background(Color("Color1"))
                     .cornerRadius(50)
