@@ -15,6 +15,7 @@ class AppViewModel: ObservableObject {
     @State var success = false
     @Published var signedIn = false
     @Published var errorMessage = ""
+    @Published var showMenu = false
     
     
     var isSignedIn: Bool {
@@ -70,5 +71,7 @@ class AppViewModel: ObservableObject {
         
         
     }
+    
+    
     
 }
