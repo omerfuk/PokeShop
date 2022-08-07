@@ -12,51 +12,74 @@ struct ProductCard: View {
     var item: Item
     @State var showAlert: Bool
     var body: some View {
-        ZStack(alignment: .topTrailing) {
-            ZStack(alignment: .bottom) {
-                KFImage(URL(string: item.item_image))
-                    .resizable()
-                    .cornerRadius(25)
-                    .frame(width: 140, height: 185)
-                    .scaledToFit()
-                
-                VStack(alignment: .leading) {
-                    Text(item.item_title)
-                        .bold()
+        
+        VStack {
+            ZStack(alignment: .bottomTrailing) {
+                ZStack(alignment: .bottom) {
+                    KFImage(URL(string: item.item_image))
+                        .resizable()
+                        .cornerRadius(25)
+                        .frame(width: 140, height: 185)
+                        .scaledToFit()
                     
-                    Text("\(ridZero(result:item.item_price))$")
-                        .font(.caption)
+                    
                     
                 }
-                .padding()
-                .frame(width: 150,height: 40, alignment: .leading)
-                .background(.ultraThinMaterial).opacity(0.95)
-                .cornerRadius(20)
+                .frame(width: 150, height: 200)
+               
+                
+                
+                
+
+            }
+            .background(Color("Color3"))
+            .padding(10)
+            .cornerRadius(15)
+            .shadow(color: Color("Color3"), radius: 3, x: 2, y: 2)
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Success"), message: Text("\(item.item_title) Added to Cart"), dismissButton: .destructive(Text("OK")))
+        }
+            HStack{
+                HStack{
+                    VStack{
+                        Text(item.item_title)
+                            .font(.callout)
+                            .bold()
+                            .shadow(color: .pink, radius: 5, x: 2, y: 2)
+                        
+                        Text("\(ridZero(result:item.item_price))$")
+                            .font(.headline)
+                            .shadow(color: .pink, radius: 5, x: 2, y: 2)
+                    }
+                    Spacer()
+                    
+                    Button {
+                        cartManager.addToCart(item: item)
+                        showAlert.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                            .padding(10)
+                            .foregroundColor(.white)
+                            .background(Color("Color3"))
+                            .cornerRadius(50)
+                            .padding()
+                    }
+                    .frame(width: 30, height: 30)
+                }
+                .padding(7)
+                
                 
             }
-            .frame(width: 150, height: 200)
-            .shadow(radius: 3)
+            .padding(4)
+            .frame(width: 160,height: 45, alignment: .leading)
+            .background(.thickMaterial).opacity(0.95)
+            .cornerRadius(20)
             
-            
-            Button {
-                cartManager.addToCart(item: item)
-                showAlert.toggle()
-            } label: {
-                Image(systemName: "plus")
-                    .padding(15) // 10 -> 15
-                    .foregroundColor(.white)
-                    .background(Color("Color1"))
-                    .cornerRadius(50)
-                    .padding()
-            }
-
         }
-        .background(.cyan.opacity(0.3))
+        .background(Color("LightYellow"))
         .cornerRadius(15)
-        .shadow(color: .black, radius: 3, x: 2, y: 2)
-        .alert(isPresented: $showAlert) {
-            Alert(title: Text("Success"), message: Text("\(item.item_title) Added to Cart"), dismissButton: .destructive(Text("OK")))
-        }
+        
+        
     }
     
     func ridZero(result: Float) -> String {

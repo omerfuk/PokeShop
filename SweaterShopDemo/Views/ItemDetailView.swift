@@ -17,7 +17,7 @@ struct ItemDetailView: View {
     
     var body: some View {
         ZStack{
-            Color("Color1").opacity(0.4).ignoresSafeArea()
+            Color("CutePink").ignoresSafeArea()
             VStack(spacing: 20) {
                 KFImage(URL(string: item.item_image))
                     .resizable()

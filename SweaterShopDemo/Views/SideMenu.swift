@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct Menu: View {
     @ObservedObject var viewModel : AppViewModel
@@ -54,6 +55,7 @@ struct Menu: View {
                 }
                 .padding()
             }
+            
             
             
             
