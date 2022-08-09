@@ -16,7 +16,7 @@
 		DE1F05C0289A4CAC00F29A96 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F05BA289A4CAC00F29A96 /* PokemonCell.swift */; };
 		DE1F05C2289A4CB800F29A96 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F05C1289A4CB700F29A96 /* Pokemon.swift */; };
 		DE25BA782897F88800306CF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE25BA772897F88800306CF6 /* GoogleService-Info.plist */; };
-		DE53F90F28967F50008755FB /* SweaterShopDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53F90E28967F50008755FB /* SweaterShopDemoApp.swift */; };
+		DE53F90F28967F50008755FB /* PokeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53F90E28967F50008755FB /* PokeShop.swift */; };
 		DE53F91128967F50008755FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE53F91028967F50008755FB /* ContentView.swift */; };
 		DE53F91328967F53008755FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE53F91228967F53008755FB /* Assets.xcassets */; };
 		DE53F91628967F53008755FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE53F91528967F53008755FB /* Preview Assets.xcassets */; };
@@ -48,8 +48,8 @@
 		DE1F05BA289A4CAC00F29A96 /* PokemonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		DE1F05C1289A4CB700F29A96 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		DE25BA772897F88800306CF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DE53F90B28967F50008755FB /* SweaterShopDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweaterShopDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE53F90E28967F50008755FB /* SweaterShopDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweaterShopDemoApp.swift; sourceTree = "<group>"; };
+		DE53F90B28967F50008755FB /* PokeShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE53F90E28967F50008755FB /* PokeShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeShop.swift; sourceTree = "<group>"; };
 		DE53F91028967F50008755FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DE53F91228967F53008755FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE53F91528967F53008755FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		DE53F90228967F50008755FB = {
 			isa = PBXGroup;
 			children = (
-				DE53F90D28967F50008755FB /* SweaterShopDemo */,
+				DE53F90D28967F50008755FB /* PokeShop */,
 				DE53F90C28967F50008755FB /* Products */,
 				96E4A44F2074E62FD0896CC2 /* Pods */,
 				DF324610A0BC653CE2978F3C /* Frameworks */,
@@ -114,25 +114,25 @@
 		DE53F90C28967F50008755FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE53F90B28967F50008755FB /* SweaterShopDemo.app */,
+				DE53F90B28967F50008755FB /* PokeShop.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DE53F90D28967F50008755FB /* SweaterShopDemo */ = {
+		DE53F90D28967F50008755FB /* PokeShop */ = {
 			isa = PBXGroup;
 			children = (
 				DEC0419C289A3C1000C6A414 /* Info.plist */,
 				DEC04197289A3A3800C6A414 /* pokegif.gif */,
 				DE25BA772897F88800306CF6 /* GoogleService-Info.plist */,
 				DE53F92C289689C1008755FB /* ViewModels */,
-				DE53F90E28967F50008755FB /* SweaterShopDemoApp.swift */,
+				DE53F90E28967F50008755FB /* PokeShop.swift */,
 				DE53F922289682C9008755FB /* Views */,
 				DE53F91C28968008008755FB /* Models */,
 				DE53F91228967F53008755FB /* Assets.xcassets */,
 				DE53F91428967F53008755FB /* Preview Content */,
 			);
-			path = SweaterShopDemo;
+			path = PokeShop;
 			sourceTree = "<group>";
 		};
 		DE53F91428967F53008755FB /* Preview Content */ = {
@@ -208,9 +208,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE53F90A28967F50008755FB /* SweaterShopDemo */ = {
+		DE53F90A28967F50008755FB /* PokeShop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE53F91928967F53008755FB /* Build configuration list for PBXNativeTarget "SweaterShopDemo" */;
+			buildConfigurationList = DE53F91928967F53008755FB /* Build configuration list for PBXNativeTarget "PokeShop" */;
 			buildPhases = (
 				91BB3AF9DED49988B463C5B8 /* [CP] Check Pods Manifest.lock */,
 				DE53F90728967F50008755FB /* Sources */,
@@ -222,13 +222,13 @@
 			);
 			dependencies = (
 			);
-			name = SweaterShopDemo;
+			name = PokeShop;
 			packageProductDependencies = (
 				DE705342289AAD480070B5CE /* SDWebImageSwiftUI */,
 				DE705345289AAD5A0070B5CE /* Kingfisher */,
 			);
 			productName = SweaterShopDemo;
-			productReference = DE53F90B28967F50008755FB /* SweaterShopDemo.app */;
+			productReference = DE53F90B28967F50008755FB /* PokeShop.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -246,7 +246,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DE53F90628967F50008755FB /* Build configuration list for PBXProject "SweaterShopDemo" */;
+			buildConfigurationList = DE53F90628967F50008755FB /* Build configuration list for PBXProject "PokeShop" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -263,7 +263,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE53F90A28967F50008755FB /* SweaterShopDemo */,
+				DE53F90A28967F50008755FB /* PokeShop */,
 			);
 		};
 /* End PBXProject section */
@@ -338,7 +338,7 @@
 				DEC058AA2898F3E90021202B /* AppViewModel.swift in Sources */,
 				DEFFE76128A0CD2F009CCFED /* Cart.swift in Sources */,
 				DE53F9292896864C008755FB /* CartManager.swift in Sources */,
-				DE53F90F28967F50008755FB /* SweaterShopDemoApp.swift in Sources */,
+				DE53F90F28967F50008755FB /* PokeShop.swift in Sources */,
 				DE53F92B2896883B008755FB /* ProductRow.swift in Sources */,
 				DE53F91E28968012008755FB /* Item.swift in Sources */,
 				DE1F05B4289A4CA100F29A96 /* PokemonViewModel.swift in Sources */,
@@ -477,11 +477,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SweaterShopDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PokeShop/Preview Content\"";
 				DEVELOPMENT_TEAM = 7CRNJ953YN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SweaterShopDemo/Info.plist;
+				INFOPLIST_FILE = PokeShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -507,11 +507,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SweaterShopDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PokeShop/Preview Content\"";
 				DEVELOPMENT_TEAM = 7CRNJ953YN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SweaterShopDemo/Info.plist;
+				INFOPLIST_FILE = PokeShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -532,7 +532,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DE53F90628967F50008755FB /* Build configuration list for PBXProject "SweaterShopDemo" */ = {
+		DE53F90628967F50008755FB /* Build configuration list for PBXProject "PokeShop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE53F91728967F53008755FB /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE53F91928967F53008755FB /* Build configuration list for PBXNativeTarget "SweaterShopDemo" */ = {
+		DE53F91928967F53008755FB /* Build configuration list for PBXNativeTarget "PokeShop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE53F91A28967F53008755FB /* Debug */,

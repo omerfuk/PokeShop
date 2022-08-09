@@ -39,26 +39,27 @@ struct Menu: View {
 
             
             Spacer()
+            /*
             
             NavigationLink {
-                
+
             } label: {
                 HStack(spacing: 15) {
-                    
+
                     Image(systemName: "rectangle.portrait.and.arrow.right")
                         .font(.title)
                         .foregroundColor(.pink)
-                        
+
                     Text("Log out")
                         .fontWeight(.bold)
                         .foregroundColor(.black)
-                    
+
                     Spacer(minLength: 0)
                 }
                 .padding()
             }
             
-            
+            */
             
             
             

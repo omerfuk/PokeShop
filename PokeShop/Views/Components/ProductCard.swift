@@ -45,11 +45,11 @@ struct ProductCard: View {
                         Text(item.item_title)
                             .font(.callout)
                             .bold()
-                            .shadow(color: .pink, radius: 2, x: 2, y: 2)
+                            
                         
                         Text("\(ridZero(result:item.item_price))$")
                             .font(.headline)
-                            .shadow(color: .pink, radius: 2, x: 2, y: 2)
+                            
                     }
                     Spacer()
                     
