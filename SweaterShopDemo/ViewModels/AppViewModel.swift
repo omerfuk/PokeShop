@@ -17,7 +17,8 @@ class AppViewModel: ObservableObject {
     @Published var signedIn = false
     @Published var errorMessage = ""
     @Published var showMenu = false
-    @Published var isUserLoggedOut = false
+    
+    
     
     
     

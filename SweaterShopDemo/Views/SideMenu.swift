@@ -7,9 +7,11 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAuth
 
 struct Menu: View {
-    @ObservedObject var viewModel : AppViewModel
+    @EnvironmentObject var appViewModel: AppViewModel
+    
     var body: some View {
         
         VStack {
@@ -38,7 +40,7 @@ struct Menu: View {
             
             Spacer()
             
-            Button {
+            NavigationLink {
                 
             } label: {
                 HStack(spacing: 15) {
@@ -55,6 +57,7 @@ struct Menu: View {
                 }
                 .padding()
             }
+            
             
             
             

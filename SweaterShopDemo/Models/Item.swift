@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct Item: Identifiable, Codable {
-    var id = UUID()
+    var id = UUID().uuidString
     var item_title: String
     var item_price: Float
     var item_description: String
     var item_category: String
     var item_image: String
+    var isAdded: Bool = false
 }
 
 

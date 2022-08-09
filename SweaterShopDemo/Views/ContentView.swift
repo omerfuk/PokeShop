@@ -26,63 +26,73 @@ struct ContentView: View {
         ZStack{
             Color("Color1").opacity(0.25).ignoresSafeArea()
             
-            ScrollView{
+            if cartManager.items.isEmpty {
                 
-                LazyVGrid(columns: columns,spacing: 20) {
-                    ForEach(search.isEmpty ? cartManager.items : cartManager.filtered) { item in
-                        
-                        NavigationLink {
-                            ItemDetailView(item: item)
-                                .environmentObject(cartManager)
-                        } label: {
-                            ProductCard(item: item, showAlert: false)
-                                .environmentObject(cartManager)
+                Spacer()
+                
+                ProgressView()
+                
+                Spacer()
+            }
+            else{
+                
+                ScrollView{
+                    
+                    LazyVGrid(columns: columns,spacing: 20) {
+                        ForEach(search.isEmpty ? cartManager.items : cartManager.filtered) { item in
+                            
+                            NavigationLink {
+                                ItemDetailView(item: item)
+                                    .environmentObject(cartManager)
+                            } label: {
+                                ProductCard(item: item, showAlert: false)
+                                    .environmentObject(cartManager)
+                            }
                         }
                     }
-                }
-                .padding()
-                
-            }
-            .searchable(text: $search)
-            .onChange(of: search, perform: { searchValue in
-                withAnimation {
-                    cartManager.filtered = cartManager.items.filter({ item in
-                        item.item_title.lowercased().contains(search.lowercased())
-                    })
-                }
-            })
-            .onAppear{
-                
-                cartManager.fetchData()
-            }
-            .navigationTitle("Sweater Shop")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink {
-                        CartView(showAlert: false)
-                            .environmentObject(cartManager)
-                    } label: {
-                        CartButton(numberOfProducts: cartManager.itemsOnCart.count)
-                            .font(.title)
-                            .foregroundColor(.pink)
-                    }
-                }
-                
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        withAnimation(.easeIn){viewModel.showMenu.toggle()}
-                    } label: {
-                        Image(systemName: "line.horizontal.3")
-                            .font(.title)
-                            .foregroundColor(.pink)
-                    }
+                    .padding()
                     
                 }
-                
-                
+                .navigationTitle("Sweater Shop")
+                .searchable(text: $search)
+                .onChange(of: search, perform: { searchValue in
+                    withAnimation {
+                        cartManager.filtered = cartManager.items.filter({ item in
+                            item.item_title.lowercased().contains(search.lowercased())
+                        })
+                    }
+                })
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink {
+                            CartView(showAlert: false)
+                                .environmentObject(cartManager)
+                        } label: {
+                            CartButton(numberOfProducts: cartManager.itemsOnCart.count)
+                                .font(.title)
+                                .foregroundColor(.pink)
+                        }
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            withAnimation(.easeIn){viewModel.showMenu.toggle()}
+                        } label: {
+                            Image(systemName: "line.horizontal.3")
+                                .font(.title)
+                                .foregroundColor(.pink)
+                        }
+                        
+                    }
+                    
+                    
+                }
             }
+            
+            
+            
             HStack {
-                Menu(viewModel: viewModel)
+                Menu()
                 //Move effect from left
                     .offset(x: viewModel.showMenu ? 0 : -UIScreen.main.bounds.width / 1.6)
                 
@@ -98,7 +108,11 @@ struct ContentView: View {
             )
             
         }
-        
+        .onAppear{
+            
+            cartManager.fetchData()
+        }
+
     }
 }
 

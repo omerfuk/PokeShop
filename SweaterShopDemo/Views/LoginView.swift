@@ -9,17 +9,20 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @EnvironmentObject var appViewModel: AppViewModel
+    @EnvironmentObject var viewModel: AppViewModel
+    
     
     var body: some View {
        
-            if appViewModel.signedIn == true {
+            if viewModel.signedIn{
                 ContentView()
                     .preferredColorScheme(.light)
+                    .environmentObject(viewModel)
             }
             else{
                 Home()
                     .preferredColorScheme(.dark)
+                    .environmentObject(viewModel)
             }
             
         
@@ -35,8 +38,7 @@ struct LoginView_Previews: PreviewProvider {
 
 struct Home: View {
     
-    
-    
+    @EnvironmentObject var viewModel: AppViewModel
     @State var index = 0
     
     var body: some View{
@@ -281,7 +283,7 @@ struct Login: View {
                 appViewModel.signIn(email: email, password: password)
                 //ALERT CONDITION
                 
-                if appViewModel.success == false {
+                if appViewModel.success == false && appViewModel.errorMessage != "" {
                     showAlert.toggle()
                 }
                 

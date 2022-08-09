@@ -21,14 +21,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct SweaterShopDemoApp: App {
     @StateObject var pokemonViewModel = PokemonViewModel()
+    @StateObject var appViewModel = AppViewModel()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                let viewModel = AppViewModel()
                 
                 ContentView()
-                    .environmentObject(viewModel)
+                    .environmentObject(appViewModel)
                     .environmentObject(pokemonViewModel)
             }
             .accentColor(Color("Color1").opacity(0.8))

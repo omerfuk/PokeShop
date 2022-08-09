@@ -45,22 +45,23 @@ struct ProductCard: View {
                         Text(item.item_title)
                             .font(.callout)
                             .bold()
-                            .shadow(color: .pink, radius: 5, x: 2, y: 2)
+                            .shadow(color: .pink, radius: 2, x: 2, y: 2)
                         
                         Text("\(ridZero(result:item.item_price))$")
                             .font(.headline)
-                            .shadow(color: .pink, radius: 5, x: 2, y: 2)
+                            .shadow(color: .pink, radius: 2, x: 2, y: 2)
                     }
                     Spacer()
                     
                     Button {
                         cartManager.addToCart(item: item)
-                        showAlert.toggle()
+
+
                     } label: {
-                        Image(systemName: "plus")
+                        Image(systemName: item.isAdded ? "checkmark" : "plus")
                             .padding(10)
                             .foregroundColor(.white)
-                            .background(Color("Color3"))
+                            .background(item.isAdded ? Color.green : Color("Color3"))
                             .cornerRadius(50)
                             .padding()
                     }
