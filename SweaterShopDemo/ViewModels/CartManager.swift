@@ -78,6 +78,7 @@ class CartManager: ObservableObject {
             return
         }
         //else adding
+      
         
         self.itemsOnCart.append(Cart(item: item, quantity: 1))
         

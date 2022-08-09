@@ -126,7 +126,7 @@ struct CartView: View {
             cartManager.setZeroTotal()
             
         } label: {
-            Text("PAY $\(cartManager.calculateTotalPrice()).00")
+            Text("PAY $\(cartManager.calculateTotalPrice())")
                 .font(.title)
                 .bold()
                 .padding()

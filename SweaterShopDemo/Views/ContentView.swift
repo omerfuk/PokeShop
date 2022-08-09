@@ -53,7 +53,7 @@ struct ContentView: View {
                     .padding()
                     
                 }
-                .navigationTitle("Sweater Shop")
+                .navigationTitle("Poke Shop")
                 .searchable(text: $search)
                 .onChange(of: search, perform: { searchValue in
                     withAnimation {

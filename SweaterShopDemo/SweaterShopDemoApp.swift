@@ -27,7 +27,7 @@ struct SweaterShopDemoApp: App {
         WindowGroup {
             NavigationView{
                 
-                ContentView()
+                LoginView()
                     .environmentObject(appViewModel)
                     .environmentObject(pokemonViewModel)
             }

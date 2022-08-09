@@ -48,7 +48,7 @@ struct ItemDetailView: View {
                 
                 HStack {
                     
-                    Text("\(cartManager.calculateTotalPrice())$")
+                    Text("\(ridZero(result: item.item_price))$")
                         .bold()
                         .font(.title)
                         .foregroundColor(Color("Color1"))
