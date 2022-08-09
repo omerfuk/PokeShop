@@ -19,7 +19,7 @@ struct PokedexView: View {
         
         ZStack{
             
-            Color("Color2").ignoresSafeArea()
+            Color("Color3").ignoresSafeArea()
             
             VStack(spacing: 5){
                 
@@ -64,7 +64,7 @@ struct PokedexView: View {
                     
                     
                 }
-                .navigationTitle("Pokemon")
+                .navigationTitle("Pokemon Info")
                 
                 
                 Spacer()

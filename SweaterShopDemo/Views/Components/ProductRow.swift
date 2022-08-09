@@ -30,6 +30,33 @@ struct ProductRow: View {
                 
             }
             
+            
+            
+            
+            Button {
+               
+            } label: {
+                Text("-")
+                    .font(.largeTitle)
+                    .foregroundColor(.pink)
+                    .bold()
+                    
+            }
+            
+//            Text("\(item.item_count)")
+//                .bold()
+//                .font(.title)
+            
+            Button {
+                
+            } label: {
+                Text("+")
+                    .font(.largeTitle)
+                    .foregroundColor(.pink)
+                    .bold()
+                    
+            }
+            
             Spacer()
             
             Image(systemName: "trash")

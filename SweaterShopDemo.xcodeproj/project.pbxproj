@@ -33,6 +33,7 @@
 		DEC04198289A3A3800C6A414 /* pokegif.gif in Resources */ = {isa = PBXBuildFile; fileRef = DEC04197289A3A3800C6A414 /* pokegif.gif */; };
 		DEC058AA2898F3E90021202B /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC058A92898F3E90021202B /* AppViewModel.swift */; };
 		DEC058AC289929EB0021202B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC058AB289929EB0021202B /* LoginView.swift */; };
+		DEFFE76128A0CD2F009CCFED /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFE76028A0CD2F009CCFED /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		DEC0419C289A3C1000C6A414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DEC058A92898F3E90021202B /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		DEC058AB289929EB0021202B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DEFFE76028A0CD2F009CCFED /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			children = (
 				DE1F05C1289A4CB700F29A96 /* Pokemon.swift */,
 				DE53F91D28968012008755FB /* Item.swift */,
+				DEFFE76028A0CD2F009CCFED /* Cart.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				DE1F05C2289A4CB800F29A96 /* Pokemon.swift in Sources */,
 				DE53F91128967F50008755FB /* ContentView.swift in Sources */,
 				DEC058AA2898F3E90021202B /* AppViewModel.swift in Sources */,
+				DEFFE76128A0CD2F009CCFED /* Cart.swift in Sources */,
 				DE53F9292896864C008755FB /* CartManager.swift in Sources */,
 				DE53F90F28967F50008755FB /* SweaterShopDemoApp.swift in Sources */,
 				DE53F92B2896883B008755FB /* ProductRow.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
+import Firebase
 
 class AppViewModel: ObservableObject {
     
@@ -18,10 +19,8 @@ class AppViewModel: ObservableObject {
     @Published var showMenu = false
     
     
-    var isSignedIn: Bool {
-        
-        return auth.currentUser != nil
-    }
+    
+    
     
     func signIn(email: String, password: String) {
         
@@ -34,6 +33,7 @@ class AppViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self?.success = true
                     self?.signedIn = true
+                    
                 }
                 
             }
@@ -50,6 +50,13 @@ class AppViewModel: ObservableObject {
             
         }
         
+    }
+    
+    func logOut() {
+        DispatchQueue.main.async {
+            try? Auth.auth().signOut()
+            self.signedIn.toggle()
+        }
     }
     
     func signUp(email: String, password: String) {

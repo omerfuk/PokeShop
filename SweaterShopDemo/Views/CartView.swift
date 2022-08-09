@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CartView: View {
     @EnvironmentObject var cartManager: CartManager
@@ -13,11 +14,79 @@ struct CartView: View {
     var body: some View {
         VStack{
             
-            
+            //this code block is the new product row, product row file is no longer in use.
             ScrollView {
                 if cartManager.itemsOnCart.count > 0 {
-                    ForEach(cartManager.itemsOnCart) { item in
-                        ProductRow(item: item)
+                    ForEach(cartManager.itemsOnCart) { cart in
+                        
+                        HStack(spacing: 15) {
+                            
+                            KFImage(URL(string: cart.item.item_image))
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 130, height: 130)
+                                .cornerRadius(15)
+                            
+                            VStack(alignment: .leading, spacing: 10) {
+                                
+                                Text(cart.item.item_title)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.black)
+                                
+                                HStack(spacing: 15) {
+                                    Text(cartManager.getPrice(value: Float(cart.item.item_price)))
+                                        .font(.title2)
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(.black)
+                                    
+                                    Spacer(minLength: 0)
+                                    
+                                    Button {
+                                        if cart.quantity > 1 {
+                                            cartManager.itemsOnCart[cartManager.getIndex(item: cart.item, isCartIndex: true)].quantity -= 1
+                                        }
+                                    } label: {
+                                        Image(systemName: "minus")
+                                            .font(.system(size: 16, weight: .heavy))
+                                            .foregroundColor(.black)
+                                    }
+                                    
+                                    Text("\(cart.quantity)")
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(.black)
+                                        
+                                    Button {
+                                        cartManager.itemsOnCart[cartManager.getIndex(item: cart.item, isCartIndex: true)].quantity += 1
+                                    } label: {
+                                        Image(systemName: "plus")
+                                            .font(.system(size: 16, weight: .heavy))
+                                            .foregroundColor(.black)
+                                    }
+
+
+                                }
+                            }
+                        }
+                        .padding()
+                        .contextMenu{
+                            
+                            //for deleting
+                            
+                            Button {
+                                //deleting items from cart
+                                let index = cartManager.getIndex(item: cart.item, isCartIndex: true)
+                                
+                                let itemIndex = cartManager.getIndex(item: cart.item, isCartIndex: false)
+                                
+                                cartManager.items[index].isAdded = false
+                                cartManager.filtered[itemIndex].isAdded = false
+                                
+                                cartManager.itemsOnCart.remove(at: index)
+                            } label: {
+                                Text("Remove")
+                            }
+
+                        }
                         
                     }
                     
@@ -25,7 +94,7 @@ struct CartView: View {
                         Text("Your Cart total is")
                         Spacer()
                         
-                        Text("$\(ridZero(result:cartManager.total)).00")
+                        Text("$\(cartManager.calculateTotalPrice()).00")
                             .bold()
                     }
                     .padding()
@@ -57,7 +126,7 @@ struct CartView: View {
             cartManager.setZeroTotal()
             
         } label: {
-            Text("PAY $\(ridZero(result:cartManager.total)).00")
+            Text("PAY $\(cartManager.calculateTotalPrice())")
                 .font(.title)
                 .bold()
                 .padding()

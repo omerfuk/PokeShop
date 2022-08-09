@@ -17,7 +17,7 @@ struct ItemDetailView: View {
     
     var body: some View {
         ZStack{
-            Color("Color1").opacity(0.4).ignoresSafeArea()
+            Color("CutePink").ignoresSafeArea()
             VStack(spacing: 20) {
                 KFImage(URL(string: item.item_image))
                     .resizable()
@@ -48,7 +48,7 @@ struct ItemDetailView: View {
                 
                 HStack {
                     
-                    Text("\(ridZero(result:item.item_price))$")
+                    Text("\(ridZero(result: item.item_price))$")
                         .bold()
                         .font(.title)
                         .foregroundColor(Color("Color1"))
@@ -62,11 +62,11 @@ struct ItemDetailView: View {
                         showAlert.toggle()
                     } label: {
                         
-                        Image(systemName: "cart.fill")
+                        Image(systemName: item.isAdded ? "checkmark" : "cart.fill")
                             .resizable()
                             .frame(width: 60, height: 60)
                             .multilineTextAlignment(.center)
-                            .foregroundColor(Color("Color1").opacity(0.8))
+                            .foregroundColor(item.isAdded ? Color.green : Color("Color1"))
                             
                             
                             

@@ -9,17 +9,20 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @EnvironmentObject var appViewModel: AppViewModel
+    @EnvironmentObject var viewModel: AppViewModel
+    
     
     var body: some View {
        
-            if appViewModel.signedIn == true {
+            if viewModel.signedIn{
                 ContentView()
                     .preferredColorScheme(.light)
+                    .environmentObject(viewModel)
             }
             else{
                 Home()
                     .preferredColorScheme(.dark)
+                    .environmentObject(viewModel)
             }
             
         
@@ -35,9 +38,9 @@ struct LoginView_Previews: PreviewProvider {
 
 struct Home: View {
     
-    
-    
+    @EnvironmentObject var viewModel: AppViewModel
     @State var index = 0
+    @State var showAlert:Bool = false
     
     var body: some View{
         
@@ -101,7 +104,7 @@ struct Home: View {
                 HStack(spacing: 25) {
                     
                     Button {
-                        
+                        showAlert.toggle()
                     } label: {
                         
                         Image("apple")
@@ -111,9 +114,12 @@ struct Home: View {
                             
                         
                     }
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Maintenance"), message: Text("Sorry...Login with apple is on maintenance, Please try again later"), dismissButton: .destructive(Text("OK")))
+                    }
                     
                     Button {
-                        
+                        showAlert.toggle()
                     } label: {
                         
                         Image("facebook")
@@ -123,9 +129,12 @@ struct Home: View {
                             .clipShape(Circle())
                         
                     }
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Maintenance"), message: Text("Sorry...Login with facebook is on maintenance, Please try again later"), dismissButton: .destructive(Text("OK")))
+                    }
                     
                     Button {
-                        
+                        showAlert.toggle()
                     } label: {
                         
                         Image("twitter")
@@ -134,6 +143,9 @@ struct Home: View {
                             .frame(width: 43, height: 43)
                             
                         
+                    }
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Maintenance"), message: Text("Sorry...Login with twitter is on maintenance, Please try again later"), dismissButton: .destructive(Text("OK")))
                     }
 
                     
@@ -281,7 +293,7 @@ struct Login: View {
                 appViewModel.signIn(email: email, password: password)
                 //ALERT CONDITION
                 
-                if appViewModel.success == false {
+                if appViewModel.success == false && appViewModel.errorMessage != "" {
                     showAlert.toggle()
                 }
                 
