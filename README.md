@@ -42,6 +42,4 @@ During my internship program on Anadolu Hayat Emeklilik A.Ş, to make it easier 
 - [GitHub](https://github.com/omerfuk/).
 - [LinkedIn](https://www.linkedin.com/in/omerkuf/).
 
-#TIMELINE
-
 
