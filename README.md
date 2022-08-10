@@ -34,7 +34,8 @@ During my internship program on Anadolu Hayat Emeklilik A.Ş, to make it easier 
 - PokeShop application is an app where the user can buy pokemon-related items, besides purchasing, they can get pokemon-specific information about these items and pokemon. User can get pokemon details from lots of different ways.
 
 ## ScreenShots
-![pokeshop](https://user-images.githubusercontent.com/69897111/183601415-4dc85b8f-3238-42c0-b809-23d457ca13c1.png)
+![LOGIN](https://user-images.githubusercontent.com/69897111/183829721-474917c7-e8ce-44ba-87bb-321d92436c2a.png)
+
 
 
 ## Contact
